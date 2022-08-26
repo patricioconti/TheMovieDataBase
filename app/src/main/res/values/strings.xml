@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">The Movie Database</string>
+
+    <string name="movie_detail_fragment_title">Movie Details</string>
+    <string name="vote_average_label">Vote average:</string>
+    <string name="vote_count_label">Vote count:</string>
+    <string name="error_message">An error has occurred</string>
+    <string name="overview_label">Overview:</string>
+    <string name="submit_rating">Submit rating</string>
+    <string name="genre">Genre:</string>
+
+
+</resources>
