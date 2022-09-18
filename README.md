@@ -58,9 +58,9 @@ Screenshots
 
 <img src="./screenshots/TMDB_NoResults.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_Retry.jpg" width="45%" height="45%">
 
-<img src="./screenshots/TMDB_Details.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_RatingSuccess.jpg" width="45%" height="45%">
+<img src="./screenshots/TMDB_Details.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_DetailsError.jpg" width="45%" height="45%">
 
-<img src="./screenshots/TMDB_DetailsError.jpg" width="45%" height="45%">
+<img src="./screenshots/TMDB_RatingSuccess.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_RatingUpdated.jpg" width="45%" height="45%">
 
 
 Purpose
