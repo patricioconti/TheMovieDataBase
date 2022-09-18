@@ -17,8 +17,14 @@
         <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabase/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1035" />
         <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabase/app/src/main/res/mipmap-hdpi/ic_launcher.xml" value="0.1035" />
         <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabase/app/src/main/res/mipmap-xhdpi/ic_launcher_round.xml" value="0.1035" />
+        <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/drawable-v24/loading_img.xml" value="0.107" />
+        <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/drawable/ic_search.xml" value="0.107" />
         <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/layout/fragment_movie_detail.xml" value="0.33" />
         <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/layout/fragment_movie_list.xml" value="0.2109375" />
+        <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/layout/movie_list_item.xml" value="0.18" />
+        <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/menu/main_menu.xml" value="0.215625" />
+        <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/mipmap-hdpi/ic_launcher.xml" value="0.2225" />
+        <entry key="..\:/Pato/Kotlin/06-Portfolio/TheMovieDatabaseAlkemy/app/src/main/res/mipmap-xhdpi/ic_launcher_round.xml" value="0.107" />
       </map>
     </option>
   </component>

@@ -3,8 +3,8 @@ package com.example.themoviedatabase.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.themoviedatabase.R
@@ -16,10 +16,10 @@ import com.example.themoviedatabase.data.remote.results.MovieDb
  * from the appropriate data source
  */
 
-//Using ListAdapter and DiffUtils to update changes on the recycler view elements
+//Using PagingDataAdapter and DiffUtils to update changes on the recycler view elements
 //Pass lambda fun val movieClickedListener: (MovieDb) -> Unit for event click on Movie Item
-class MovieListAdapter(private val movieClickedListener: (MovieDb) -> Unit) :
-    ListAdapter<MovieDb, MovieListAdapter.ViewHolder>(DiffCallback) {
+class MoviePagedListAdapter (private val movieClickedListener: (MovieDb) -> Unit) :
+   PagingDataAdapter<MovieDb, MoviePagedListAdapter.ViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = MovieListItemBinding.inflate(
@@ -35,13 +35,14 @@ class MovieListAdapter(private val movieClickedListener: (MovieDb) -> Unit) :
         // Get the data at the current position
         val movie = getItem(position)
         // Bind Movie Data with UI components
-        holder.bind(movie)
-        // When clicking on an itemView of the recycler view then
-        // call lambda movieClickedListener passing parameter movie (movie in current the position)
-        holder.itemView.setOnClickListener { movieClickedListener(movie)
+        if (movie != null) {
+            holder.bind(movie)
+            // When clicking on an itemView of the recycler view then
+            // call lambda movieClickedListener passing parameter movie (movie in current the position)
+            holder.itemView.setOnClickListener { movieClickedListener(movie)
+            }
         }
     }
-
 
     /**
      * Initialize view elements

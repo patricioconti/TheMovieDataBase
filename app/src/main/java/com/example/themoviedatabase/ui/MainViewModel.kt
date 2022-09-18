@@ -1,71 +1,49 @@
 package com.example.themoviedatabase.ui
 
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.themoviedatabase.data.network.results.MovieDb
-import com.example.themoviedatabase.data.repository.MovieRepository
-import kotlinx.coroutines.launch
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
+import com.example.themoviedatabase.data.remote.results.MovieDb
+import com.example.themoviedatabase.data.repository.movierating.MoviePagingSource
+import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import kotlinx.coroutines.flow.Flow
 
-//TheMovieDbApiStatus possible states
-enum class TheMovieDbApiStatus { LOADING, ERROR, DONE }
+private const val ITEMS_PER_PAGE = 20
 
+class MainViewModel(repository: MovieRepository) : ViewModel() {
 
-class MainViewModel(private val repository: MovieRepository) : ViewModel() {
-
-    // The internal MutableLiveData that stores the status of the most recent request
-    private val _status = MutableLiveData<TheMovieDbApiStatus>()
-    // The external immutable LiveData for the request status
-    val status: LiveData<TheMovieDbApiStatus> = _status
-
-
-    // MutableLiveData which stores a list of movies MovieDb objects
-    private val _movies = MutableLiveData<List<MovieDb>>()
-    // The external immutable LiveData for movies
-    val movies: LiveData<List<MovieDb>> = _movies
+    //Initialize pagingSource passing repository as parameter.
+    private val pagingSource = MoviePagingSource(repository)
 
     // This value is used to notify splashscreen (app launching) when data is loaded
     var isDataLoading = true
 
-    //Remember to call init after liveData variable initialization
+    //Initiate viewModel calling getPagedPopularMovies() to have the list of movies when viewModel
+    //is created.
     init {
-        //getPopularMovies at viewModel init
-        getPopularMovies()
+        getPagedPopularMovies()
+        // This value is used to notify splashscreen (app launching) when data is loaded
+        isDataLoading = false
     }
 
-    // This fun getPopularMovies calls the fun from repository
-    //  The return value is used to notify splashscreen (app launching) when data is loaded
-    private fun getPopularMovies() {
+    //Use Flow PagingData to getPagedPopularMovies
+    fun getPagedPopularMovies(): Flow<PagingData<MovieDb>> {
 
-        //Call repository fun using Coroutines
-        viewModelScope.launch {
-            //Set status to LOADING
-            _status.value = TheMovieDbApiStatus.LOADING
-
-            //Call getPopularMovies from repository
-            val result = repository.getPopularMovies()
-
-            //If data result is not null
-            if (result.data != null) {
-                //Store movieList Data from repository on _movies
-                _movies.value = result.data.results
-                //Success
-                //Set status to DONE
-                _status.value = TheMovieDbApiStatus.DONE
-            } else {
-                val errorMessage = result.error ?: "An error has occurred"
-                //When an error, Set status to ERROR
-                _status.value = TheMovieDbApiStatus.ERROR
-                //If there is an error _movies is an empty list
-                _movies.value = listOf()
-            }
-            // This value is used to notify splashscreen (app launching) when data is loaded
-            isDataLoading = false
-        }
+        //Pager for Paging library
+        return Pager(
+            //The PagingConfig have two params, the items per page size and the enablePlaceHolders.
+            config = PagingConfig(pageSize = ITEMS_PER_PAGE, enablePlaceholders = false),
+            //Define pagingSourceFactory, which is going to be pagingSource
+            pagingSourceFactory = { pagingSource }
+            //as flow
+        ).flow
+            .cachedIn(viewModelScope)
     }
-    }
+}
 
 
 

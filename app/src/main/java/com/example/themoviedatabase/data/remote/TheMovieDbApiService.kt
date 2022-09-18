@@ -1,11 +1,13 @@
-package com.example.themoviedatabase.data.network
+package com.example.themoviedatabase.data.remote
+
+
 
 import com.example.themoviedatabase.BuildConfig
-import com.example.themoviedatabase.data.network.requests.MovieRatingDto
-import com.example.themoviedatabase.data.network.results.GuestSessionIdResult
-import com.example.themoviedatabase.data.network.results.PopularMoviesResult
-import com.example.themoviedatabase.data.network.results.MovieRatingResponse
-import com.example.themoviedatabase.data.network.results.moviedetails.MovieDetailsResult
+import com.example.themoviedatabase.data.remote.requests.MovieRatingBodyRequest
+import com.example.themoviedatabase.data.remote.results.GuestSessionIdResult
+import com.example.themoviedatabase.data.remote.results.PopularMoviesResult
+import com.example.themoviedatabase.data.remote.results.MovieRatingResponse
+import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -41,7 +43,11 @@ interface TheMovieDbApiService {
     @GET("movie/popular")
     //To list popular movies, I also pass query argument name and its value so to obtain
     //https://api.themoviedb.org/3/movie/popular?api_key=4ff5054f4fcb39f0f4fc6b9a578265d6
-  suspend fun getPopularMovies(@Query("api_key") apiKey:String): Response<PopularMoviesResult>
+    // Add Query page to use pagination
+  suspend fun getPopularMovies(
+        @Query("api_key") apiKey:String,
+        @Query("page") page: Int
+    ): Response<PopularMoviesResult>
 
 
     //Indicate retrofit that is a GET request and that the extreme is movie/{movie_id}
@@ -59,8 +65,7 @@ interface TheMovieDbApiService {
     @GET("authentication/guest_session/new")
     //To get guest session id , I also pass query argument name and its value so to obtain
     //https://api.themoviedb.org/3/authentication/guest_session/new?api_key=4ff5054f4fcb39f0f4fc6b9a578265d6
-    suspend fun getGuestSessionId(@Query("api_key") apiKey:String): GuestSessionIdResult
-
+    suspend fun getGuestSessionId(@Query("api_key") apiKey:String): Response<GuestSessionIdResult>
 
     //To post a movie rating, I need to pass a header, path for the movie, query api_key,
     //query guest_session_id and body with rating value
@@ -71,8 +76,13 @@ interface TheMovieDbApiService {
         @Path("movie_id") movieId: Int,
         @Query("api_key") apiKey: String,
         @Query("guest_session_id") guestSessionId: String,
-        @Body value: MovieRatingDto,
-    ) : MovieRatingResponse
+        @Body value: MovieRatingBodyRequest,
+    ) : Response<MovieRatingResponse>
+
+    //repositorio rating tenga adentro una instancia de repositorio de sesion
+    //repositorio de sesion tiene que recibir un local data source y un remote data source
+    //local data source seria el sharedPreferences.Busca primero local y sino hay busca
+    //guestid remoto
 
 }
 

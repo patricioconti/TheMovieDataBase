@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">The Movie Database</string>
-
     <string name="movie_detail_fragment_title">Movie Details</string>
     <string name="vote_average_label">Vote average:</string>
     <string name="vote_count_label">Vote count:</string>
@@ -8,6 +7,12 @@
     <string name="overview_label">Overview:</string>
     <string name="submit_rating">Submit rating</string>
     <string name="genre">Genre:</string>
-
+    <string name="rating_bar_description">Rating bar to rate movie</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search movie</string>
+    <string name="no_results_search">No results found</string>
+    <string name="retry">Retry</string>
+    <string name="not_found">- not found</string>
+    <string name="rating_success">%1$s Rating value is %2$s </string>
 
 </resources>

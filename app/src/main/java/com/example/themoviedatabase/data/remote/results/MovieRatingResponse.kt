@@ -1,4 +1,4 @@
-package com.example.themoviedatabase.data.network.results
+package com.example.themoviedatabase.data.remote.results
 
 import com.squareup.moshi.Json
 
@@ -7,5 +7,5 @@ import com.squareup.moshi.Json
 data class MovieRatingResponse(
     @Json(name = "status_code") val statusCode: Int,
     @Json(name = "status_message") val statusMessage: String,
-    val success: Boolean
+    @Json(name = "success") val success: Boolean
 )

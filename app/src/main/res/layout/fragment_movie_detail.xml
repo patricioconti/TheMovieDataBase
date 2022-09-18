@@ -58,43 +58,20 @@
         app:layout_constraintTop_toBottomOf="@+id/movieTitle"
         tools:text="2022" />
 
-        <TextView
-            android:id="@+id/genreLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceCaption"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/movieYear"
-            android:layout_marginStart="@dimen/margin_between_elements"
-            app:layout_constraintTop_toTopOf="@+id/movieYear"
-            android:text="@string/genre"
-            tools:text="Genre:" />
-
-        <TextView
-            android:id="@+id/movieGenre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceCaption"
-            app:layout_constraintStart_toEndOf="@+id/genreLabel"
-            android:layout_marginStart="4dp"
-            app:layout_constraintTop_toTopOf="@+id/movieYear"
-            tools:text="Adventure" />
-
-
-
         <RatingBar
             android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:numStars="5"
-            style="?android:attr/ratingBarStyleIndicator"
-            android:isIndicator="false"
             android:layout_marginTop="@dimen/margin_between_elements"
             android:backgroundTint="@color/lightBlue"
+            android:contentDescription="@string/rating_bar_description"
+            android:isIndicator="false"
+            android:numStars="5"
             android:progressTint="@color/yellow"
             android:stepSize="0.5"
             app:layout_constraintStart_toStartOf="@id/movieTitle"
-            app:layout_constraintTop_toBottomOf="@id/movieGenre" />
+            app:layout_constraintTop_toBottomOf="@id/movieYear" />
 
     <TextView
         android:id="@+id/overviewLabel"
@@ -125,6 +102,34 @@
             android:text="@string/submit_rating"
             app:layout_constraintStart_toStartOf="@id/movieTitle"
             app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/movieDetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="movieBackdrop,moviePoster,movieTitle,movieYear,
+            ratingBar,overviewLabel,movieOverview,rateMovieButton"/>
+
+        <ImageView
+            android:id="@+id/status_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_connection_error"
+            android:contentDescription="@string/error_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/rateMovieButton"
+            app:layout_constraintStart_toEndOf="@id/rateMovieButton"
+            android:layout_marginStart="@dimen/margin_between_elements"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
