@@ -52,11 +52,11 @@ Kotlin
 
 Screenshots
 --------------
-<img src="./screenshots/TMDB_AppIcon.jpg" width="30%" height="30%">&ensp;<img src="./screenshots/TMDB_Splashscreen.jpg" width="30%" height="30%">&ensp;<img src="./screenshots/TMDB_Home.jpg" width="30%" height="30%">
+<img src="./screenshots/TMDB_AppIcon.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_Splashscreen.jpg" width="40%" height="30%">&ensp;<img src="./screenshots/TMDB_Home.jpg" width="40%" height="40%">
 
-<img src="./screenshots/TMDB_Search.jpg" width="30%" height="30%">&ensp;<img src="./screenshots/TMDB_NoResults.jpg" width="30%" height="30%">&ensp;<img src="./screenshots/TMDB_Retry.jpg" width="30%" height="30%">
+<img src="./screenshots/TMDB_Search.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_NoResults.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_Retry.jpg" width="40%" height="40%">
 
-<img src="./screenshots/TMDB_Details.jpg" width="30%" height="30%">&ensp;<img src="./screenshots/TMDB_RatingSuccess.jpg" width="30%" height="30%">&ensp;<img src="./screenshots/TMDB_DetailsError.jpg" width="30%" height="30%">
+<img src="./screenshots/TMDB_Details.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_RatingSuccess.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_DetailsError.jpg" width="40%" height="40%">
 
 
 Purpose
