@@ -37,7 +37,7 @@ Unit tests
 * MovieRepositoryTests
 * API service test using a mockServer and a local .json file
 
-Instrumentation test:
+Instrumentation tests
 --------------
 * NavigationTests using the TestNavHostController
 * SearchviewTests using Espresso
@@ -46,17 +46,21 @@ Architecture: MVVM
 --------------
 <img src="./screenshots/TMDB_Architecture.jpg" width="100%" height="100%">
 
-Language: 
+Language 
 --------------
 Kotlin
 
 Screenshots
 --------------
-<img src="./screenshots/TMDB_AppIcon.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_Splashscreen.jpg" width="40%" height="30%">&ensp;<img src="./screenshots/TMDB_Home.jpg" width="40%" height="40%">
+<img src="./screenshots/TMDB_AppIcon.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_Splashscreen.jpg" width="45%" height="45%">
 
-<img src="./screenshots/TMDB_Search.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_NoResults.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_Retry.jpg" width="40%" height="40%">
+<img src="./screenshots/TMDB_Home.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_Search.jpg" width="45%" height="45%">
 
-<img src="./screenshots/TMDB_Details.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_RatingSuccess.jpg" width="40%" height="40%">&ensp;<img src="./screenshots/TMDB_DetailsError.jpg" width="40%" height="40%">
+<img src="./screenshots/TMDB_NoResults.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_Retry.jpg" width="45%" height="45%">
+
+<img src="./screenshots/TMDB_Details.jpg" width="45%" height="45%">&ensp;<img src="./screenshots/TMDB_RatingSuccess.jpg" width="45%" height="45%">
+
+<img src="./screenshots/TMDB_DetailsError.jpg" width="45%" height="45%">
 
 
 Purpose
