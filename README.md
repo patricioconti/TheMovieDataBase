@@ -33,21 +33,22 @@ The app theme was designed using The Movie Data Base branding design guidelines.
  
 Unit tests
 --------------
-*DetailViewModelTests
-*MovieRepositoryTests
-*API service test using a mockServer and a local .json file
+* DetailViewModelTests
+* MovieRepositoryTests
+* API service test using a mockServer and a local .json file
 
 Instrumentation test:
 --------------
-*NavigationTests using the TestNavHostController
-*SearchviewTests using Espresso
+* NavigationTests using the TestNavHostController
+* SearchviewTests using Espresso
 
 Architecture: MVVM
 --------------
 <img src="./screenshots/TMDB_Architecture.jpg" width="100%" height="100%">
 
-Language: Kotlin
+Language: 
 --------------
+Kotlin
 
 Screenshots
 --------------
@@ -62,19 +63,19 @@ Purpose
 --------------
 This code demonstrates how to implement:
 
-*Custom theme and app launcher
-*Splashscreen Theme
-*Navigation Component and navArgs
-*RecyclerView and DiffUtils
-*Paging Library
-*SearchView widget
-*Coroutines
-*Retrofit, Moshi and Coil
-*ViewModel, LiveData, Flow
-*Repository Pattern, LocalDataSources, RemoteDataSources
-*Wrappers for Repository results and Operation States
-*Unit Testing with Mockito and a Mockserver
-*Instrumentation Testing with TestNavHostController and Espresso
+* Custom theme and app launcher
+* Splashscreen Theme
+* Navigation Component and navArgs
+* RecyclerView and DiffUtils
+* Paging Library
+* SearchView widget
+* Coroutines
+* Retrofit, Moshi and Coil
+* ViewModel, LiveData, Flow
+* Repository Pattern, LocalDataSources, RemoteDataSources
+* Wrappers for Repository results and Operation States
+* Unit Testing with Mockito and a Mockserver
+* Instrumentation Testing with TestNavHostController and Espresso
 
 Other tools used:
 
