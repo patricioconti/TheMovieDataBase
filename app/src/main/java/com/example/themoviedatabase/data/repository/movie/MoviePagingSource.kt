@@ -1,4 +1,4 @@
-package com.example.themoviedatabase.data.repository.movierating
+package com.example.themoviedatabase.data.repository.movie
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

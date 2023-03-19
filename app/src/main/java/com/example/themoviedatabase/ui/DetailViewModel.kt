@@ -1,16 +1,14 @@
 package com.example.themoviedatabase.ui
 
-import android.provider.Settings.Global.getString
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.themoviedatabase.R
 import com.example.themoviedatabase.data.remote.requests.MovieRatingBodyRequest
 import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
 import com.example.themoviedatabase.data.remote.results.MovieRatingResponse
 import com.example.themoviedatabase.data.repository.movierating.MovieRatingRepository
-import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 import com.example.themoviedatabase.data.utils.*
 import kotlinx.coroutines.launch
 

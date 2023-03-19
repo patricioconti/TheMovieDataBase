@@ -3,7 +3,7 @@ package com.example.themoviedatabase
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
 import com.example.themoviedatabase.data.repository.movierating.MovieRatingRepository
-import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 import com.example.themoviedatabase.data.repository.RepositoryResult
 import com.example.themoviedatabase.data.repository.Source
 import com.example.themoviedatabase.data.utils.Loaded

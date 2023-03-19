@@ -3,7 +3,7 @@ package com.example.themoviedatabase.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.themoviedatabase.data.repository.movierating.MovieRatingRepository
-import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 
 //Factory to instantiate viewModel passing movieRepository and movieRatingRepository
 @Suppress("UNCHECKED_CAST")

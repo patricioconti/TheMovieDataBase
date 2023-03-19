@@ -15,9 +15,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.themoviedatabase.MovieApplication
 import com.example.themoviedatabase.R
-import com.example.themoviedatabase.data.repository.movierating.MovieLocalDataSource
-import com.example.themoviedatabase.data.repository.movierating.MovieRemoteDataSource
-import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import com.example.themoviedatabase.data.repository.movie.MovieLocalDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRemoteDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 import com.example.themoviedatabase.databinding.FragmentMovieListBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

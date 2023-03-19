@@ -1,4 +1,4 @@
-package com.example.themoviedatabase.data.repository.movierating
+package com.example.themoviedatabase.data.repository.movie
 
 import com.example.themoviedatabase.BuildConfig
 import com.example.themoviedatabase.data.remote.MovieDbClient
@@ -54,7 +54,7 @@ class MovieRemoteDataSource {
         try {
             //Call MovieDBClient with retrofit service, call getMovieDetails passing movieId and apiKey
             val response: Response<MovieDetailsResult> =
-                MovieDbClient.retrofitService.getMovieDetails(movieId, BuildConfig.API_KEY)
+                MovieDbClient.retrofitService.getMovieDetails(movieId,BuildConfig.API_KEY )
 
             //Response body on movieDetails
             val movieDetails = response.body()
