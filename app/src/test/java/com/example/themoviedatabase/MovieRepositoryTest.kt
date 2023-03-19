@@ -3,9 +3,9 @@ package com.example.themoviedatabase
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
 import com.example.themoviedatabase.data.repository.*
-import com.example.themoviedatabase.data.repository.movierating.MovieLocalDataSource
-import com.example.themoviedatabase.data.repository.movierating.MovieRemoteDataSource
-import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import com.example.themoviedatabase.data.repository.movie.MovieLocalDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRemoteDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertTrue

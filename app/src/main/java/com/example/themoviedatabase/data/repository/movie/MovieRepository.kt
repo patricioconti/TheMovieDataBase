@@ -1,7 +1,7 @@
-package com.example.themoviedatabase.data.repository.movierating
+package com.example.themoviedatabase.data.repository.movie
 
-import com.example.themoviedatabase.data.remote.results.PopularMoviesResult
 import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
+import com.example.themoviedatabase.data.remote.results.PopularMoviesResult
 import com.example.themoviedatabase.data.repository.RepositoryResult
 
 //Repository has two sources: remoteDataSource API and localDataSource Room.

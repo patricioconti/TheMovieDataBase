@@ -16,6 +16,9 @@ import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
 import com.example.themoviedatabase.data.repository.guestsessionid.GuestSessionIdLocalDataSource
 import com.example.themoviedatabase.data.repository.guestsessionid.GuestSessionIdRemoteDataSource
 import com.example.themoviedatabase.data.repository.guestsessionid.GuestSessionIdRepository
+import com.example.themoviedatabase.data.repository.movie.MovieLocalDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRemoteDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 import com.example.themoviedatabase.data.repository.movierating.*
 import com.example.themoviedatabase.data.utils.Error
 import com.example.themoviedatabase.data.utils.Loaded

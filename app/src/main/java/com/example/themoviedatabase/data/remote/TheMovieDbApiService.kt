@@ -78,12 +78,6 @@ interface TheMovieDbApiService {
         @Query("guest_session_id") guestSessionId: String,
         @Body value: MovieRatingBodyRequest,
     ) : Response<MovieRatingResponse>
-
-    //repositorio rating tenga adentro una instancia de repositorio de sesion
-    //repositorio de sesion tiene que recibir un local data source y un remote data source
-    //local data source seria el sharedPreferences.Busca primero local y sino hay busca
-    //guestid remoto
-
 }
 
 //Expose the service to the rest of the app using object declaration.

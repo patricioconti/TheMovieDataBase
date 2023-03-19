@@ -9,9 +9,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.themoviedatabase.MovieApplication
 import com.example.themoviedatabase.R
-import com.example.themoviedatabase.data.repository.movierating.MovieLocalDataSource
-import com.example.themoviedatabase.data.repository.movierating.MovieRemoteDataSource
-import com.example.themoviedatabase.data.repository.movierating.MovieRepository
+import com.example.themoviedatabase.data.repository.movie.MovieLocalDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRemoteDataSource
+import com.example.themoviedatabase.data.repository.movie.MovieRepository
 
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {

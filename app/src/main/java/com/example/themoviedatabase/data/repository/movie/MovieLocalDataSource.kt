@@ -1,6 +1,4 @@
-package com.example.themoviedatabase.data.repository.movierating
-
-
+package com.example.themoviedatabase.data.repository.movie
 
 import com.example.themoviedatabase.data.local.MovieDetailsDao
 import com.example.themoviedatabase.data.remote.results.MovieDetailsResult
